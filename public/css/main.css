@@ -1,0 +1,105 @@
+html, body {
+  width:  100%;
+  height: 100%;
+  margin: 0px;
+  overflow: hidden;
+  background:#222;
+  color:#aaa;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#menuBarMain{
+    background: #333;
+    width: 100%;
+    height: 25px;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+    cursor: default;
+}
+
+#statusBarMain{
+    background: #000;
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    border-top: solid 1px;
+    border-color: #222;
+    z-index:9999;
+}
+
+#fileBrowserMain{
+    background: #222;
+    width: 20%;
+    height: 100%;
+    position:absolute;
+    top: 51px;
+    left:0px;
+    
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+    cursor: default;
+	overflow:auto;
+}
+
+#editorMain{
+    background: #111;
+    top: 51px;
+    left: 20%;
+    width: 80%;
+    height: 100%;
+    position: absolute;
+}
+
+#contextMenu{
+	position:absolute;
+	top:0px;
+	left:0px;
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+    cursor: default;
+}
+
+.editorTextarea{
+    height:100%;
+    width:100%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #444;;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #444;;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-track:hover {
+  background: transparent;
+}
+::-webkit-scrollbar-track:active {
+  background: transparent;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

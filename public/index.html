@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <title>Doing-it-LIVE</title>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">  
+    <!-- Bootstrap -->
+      
+    <!--  
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/bootstrap/css/cyborg.min.css" rel="stylesheet">
+    -->
+      
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cyborg/bootstrap.min.css" media="screen">
+
+    <!-- Codemirror -->
+    <link rel="stylesheet" href="lib/codemirror/theme/flunked.css">
+    <link rel="stylesheet" href="lib/codemirror/lib/codemirror.css">
+     
+
+
+</head>
+<body onload='pageLoaded()'>
+      <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../" class="navbar-brand">DOIN-IT-LIVE</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+       </div>
+      </div>
+  
+  	<div id='fileBrowser'>
+        <div id='fileBrowserMain' class="list-group table-of-contents">
+        </div>
+ 	</div>
+
+        <div id='editorMain'>
+          	<ul id='editorTabs' class="nav nav-tabs">
+          	</ul>
+            
+           	<div id="editorPanes" class="tab-content">
+        	</div>
+        </div>
+        <div id='statusBarMain'>
+           <div id="statusBar1" class="col-md-8"></div>
+           <div id="statusBar2" class="col-md-4"></div>
+        </div>
+
+           
+          
+        <!-- Modal -->
+        <div id="loginModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Login</h4>
+              </div>
+              <div class="modal-body">
+                <div class="input-group">
+                  <input id="loginUser" type="text" class="form-control" placeholder="Username" aria-describedby="username" autofocus>
+                </div>
+                <br>
+                <div class="input-group">                 
+                  <input id="loginPass" type="password" class="form-control" placeholder="Password" aria-describedby="password">
+                </div>
+               	<br>
+                <div id="loginOutput"></div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" onClick="login()">Login</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+<!--
+<ul id="contextMenu" class="dropdown-menu" style="display:block" >
+    <li><a tabindex="-1" href="#">Action</a></li>
+    <li><a tabindex="-1" href="#">Another action</a></li>
+    <li><a tabindex="-1" href="#">Something else here</a></li>
+    <li class="divider"></li>
+    <li><a tabindex="-1" href="#">Separated link</a></li>
+</ul>
+-->
+
+<!-- Include JS, apparently we do this at the end of the page now? -->
+<script src="js/uploadManager.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/codemirror/lib/codemirror.js"></script>
+<script src="lib/codemirror/mode/javascript/javascript.js"></script>
+</body>
+</html>
