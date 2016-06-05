@@ -7,6 +7,7 @@ var csrfToken = null;
 var tabCounter = 0;
 
 var uploadManager = new UploadManager();
+var divider = new Divider("fileBrowserMain", "editorMain");
 	
 var pageLoaded = function(){
   	reAuth();

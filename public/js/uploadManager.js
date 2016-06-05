@@ -18,6 +18,8 @@ class UploadManager {
                 let reader = new FileReader();
                 reader.onload = function(e2) { // finished reading file data.
                   upload(jemoeder, e2.currentTarget.result);
+                  updateFiles();
+
                 }
                 reader.readAsBinaryString(file); // start reading the file data.  
         	}   
@@ -26,7 +28,7 @@ class UploadManager {
       	function upload(file, data){
             console.log(file);
             log("UPLOAD:" + pwd() + file.name);
-            var request = post("api/save/"+file.name+"?cd="+pwd(), data);
+            var request = uploadRequest("api/save/"+file.name+"?cd="+pwd(), data);
             if(request.status == 200){
               	log("UPLOAD: "+pwd() + file.name + " OK!");
             } else {
@@ -34,6 +36,15 @@ class UploadManager {
               	handleError(request);
             }
 
+        }
+      
+      	function uploadRequest(yourUrl, data){
+            var Httpreq = new XMLHttpRequest(); // a new request
+            Httpreq.open("POST",yourUrl,false);
+            Httpreq.setRequestHeader("X-Csrf-Token", csrfToken);
+            Httpreq.setRequestHeader("Content-Type", "application/octet-stream");
+            Httpreq.send({data:data});
+            return Httpreq;
         }
 	}
 };
